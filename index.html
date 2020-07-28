@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newwwidea - Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"></script>
+    <script src="js/anime.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <img class="comets-img" src="img/comets.svg" alt="comets">
+        <img class="footer-img" src="img/footer.svg" alt="footer">
+        <img class="logo-img" src="img/logo.svg" alt="logo" height="40">
+            <div class="content">
+<!--                <img class="griffin-img" src="img/griffin.svg" alt="griffin">-->
+                <object class="griffin-img" id="griffon" type="image/svg+xml" data="img/griffin.svg"></object>
+
+                <div class="intro__content">
+                    <img class="spot-img" src="img/spot.svg" alt="spot">
+                    <h1>
+                        Ой, а у нас ребрендинг <span class="intro__dot1">.</span> <span class="intro__dot2">.</span> <span class="intro__dot3">.</span>
+                    </h1>
+                    <p>
+                        Ожидаем Ваши стерильные письма:<br>
+                        <a href="mailto:office@newwwidea.com">office@newwwidea.com</a>
+                    </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var animate = new Vivus('griffon', {
+            type: 'scenario',
+            duration: 150,
+            start: 'autostart',
+            onReady:function (myVivus) {
+                let griffon = myVivus.el;
+                let a = griffon.getElementsByClassName('cls-24');
+                let b = griffon.getElementsByClassName('cls-13');
+                let c = griffon.getElementsByClassName('cls-14');
+                let d = griffon.getElementsByClassName('cls-15');
+                let e = griffon.getElementsByClassName('cls-16');
+                let f = griffon.getElementsByClassName('cls-17');
+                let circle = document.getElementsByClassName('cls-10');
+
+                anime({
+                    targets: [b,c,d,e,f],
+                    translateX: -1,
+                    translateY: -3,
+                    delay: anime.stagger(100, {start: 3000}),
+                    direction: 'alternate',
+                    loop: true,
+                    easing: 'easeInOutSine',
+                    duration: 100
+                });
+
+                // var tl = anime.timeline({
+                //     delay: function(el, i) { return i * 5000 },
+                //     direction: 'alternate',
+                //     // loop: true,
+                //     easing: 'easeInOutSine',
+                //     duration: 80
+                // });
+                // tl
+                //     .add({
+                //         targets: b,
+                //         translateX: -1,
+                //         translateY: -3,
+                //     })
+                //     .add({
+                //         targets: c,
+                //         translateX: -1,
+                //         translateY: -3,
+                //     })
+                //     .add({
+                //         targets: d,
+                //         translateX: -1,
+                //         translateY: -3,
+                //     })
+                //     .add({
+                //         targets: e,
+                //         translateX: -1,
+                //         translateY: -3,
+                //     })
+                //     .add({
+                //         targets: f,
+                //         translateX: -1,
+                //         translateY: -3,
+                //     });
+
+
+                // anime({
+                //     targets: d,
+                //     translateX: -1,
+                //     translateY: -3,
+                //     direction: 'alternate',
+                //     // delay: anime.stagger(100,{easing: 'easeOutQuad', start: 1000}),
+                //     loop: true,
+                //     easing: 'easeInOutSine'
+                // });
+                // anime({
+                //     targets: e,
+                //     translateX: -1,
+                //     translateY: -3,
+                //     direction: 'alternate',
+                //     // delay: anime.stagger(100,{easing: 'easeOutQuad', start: 1000}),
+                //     loop: true,
+                //     easing: 'easeInOutSine'
+                // });
+                // anime({
+                //     targets: f,
+                //     translateX: -1,
+                //     translateY: -3,
+                //     direction: 'alternate',
+                //     // delay: anime.stagger(100,{easing: 'easeOutQuad', start: 1000}),
+                //     loop: true,
+                //     easing: 'easeInOutSine'
+                // });
+//                 let path = anime.path(circle);
+// console.log(path);
+//                 anime({
+//                     targets: a,
+//                     // points: ,
+//                     // translateX: 10,
+//                     // translateY: -3,
+//                     rotateY: [-15, 10, -5, 0],
+//                     direction: 'alternate',
+//                     delay: 100,
+//                     loop: true,
+//                     easing: 'easeInOutQuad'
+//                 });
+            }
+        });
+
+    </script>
+</body>
+</html>
